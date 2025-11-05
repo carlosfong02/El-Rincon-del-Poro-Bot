@@ -74,20 +74,17 @@ Este proyecto fue construido con Python y demuestra un pipeline de datos complet
     python bot.py
     ```
 
-## 🚀 Despliegue 24/7 en Replit
+## 🚀 Despliegue 24/7 en Render
 
-Este bot está configurado para funcionar 24/7 de forma gratuita utilizando la plataforma [Replit](https://replit.com/) y un servicio de monitoreo externo.
+Este bot está desplegado para funcionar 24/7 de forma gratuita utilizando la plataforma [Render](https://render.com/) y un servicio de monitoreo externo.
 
 ### Cómo Funciona
 
-El despliegue se basa en un truco simple para evitar que los "Repls" gratuitos se "duerman" por inactividad:
+1.  **Servidor Web Ligero:** Se utiliza la biblioteca **Flask** (ver `keep_alive.py`) para crear un pequeño servidor web que se ejecuta en un hilo (`thread`) paralelo junto al bot de Discord.
+2.  **Monitoreo Externo:** Un servicio gratuito como [UptimeRobot](https://uptimerobot.com/) se configura para "visitar" la URL pública que Render nos proporciona (la dirección `.onrender.com`) cada 5 minutos.
+3.  **Actividad Constante:** Esta visita constante evita que el plan gratuito se "duerma", garantizando que el bot de Discord permanezca conectado 24/7.
 
-1.  **Servidor Web Ligero:** Se utiliza la biblioteca **Flask** (ver `keep_alive.py`) para crear un pequeño servidor web que se ejecuta en un hilo paralelo junto al bot de Discord.
-2.  **Monitoreo Externo:** Un servicio gratuito como [UptimeRobot](https://uptimerobot.com/) se configura para "visitar" la URL pública de este servidor web (la dirección `.repl.app`) cada 5 minutos.
-3.  **Actividad Constante:** Esta visita constante simula tráfico y le indica a Replit que el proyecto está activo, evitando que el bot se desconecte.
+### Configuración en Render
 
-### Nuevas Dependencias para Despliegue
-
-* **Flask:** Para crear el servidor web.
-* **UptimeRobot:** (Servicio externo) Para el monitoreo.
-* **keep_alive.py:** El script que contiene la lógica del servidor web.
+* **Build Command:** `pip install -r requirements.txt`
+* **Start Command:** `python bot.py`
