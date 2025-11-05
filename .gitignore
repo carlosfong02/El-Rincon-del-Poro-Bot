@@ -3,7 +3,6 @@
 
 # Archivos de memoria del bot
 last_patch_url.txt
-sent_reminders.json
 
 # Archivos de base de datos (si los usamos en el futuro)
 *.db
