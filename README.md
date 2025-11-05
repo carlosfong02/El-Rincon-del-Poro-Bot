@@ -12,14 +12,14 @@ Este proyecto fue construido con Python y demuestra un pipeline de datos complet
 
 ## 🚀 Características Principales
 
-* [cite_start]**Scraping Web Avanzado:** Extrae información detallada (texto, imágenes de resumen, íconos de habilidades) [cite: 180-186, 188-202] directamente de la página de notas de parche.
-* [cite_start]**Sistema de Comandos Intuitivo:** Utiliza prefijos temáticos (`p!` para Parches, `c!` para Clash) [cite: 225-231] para una navegación fácil e intuitiva.
-* [cite_start]**Anuncios Proactivos:** El bot es "consciente del tiempo" gracias a la librería `pytz` [cite: 174-175, 204-207]. [cite_start]Revisa un calendario (`.json`) y envía anuncios automáticamente en la zona horaria de CDMX [cite: 207-215].
-* [cite_start]**Anuncios de Clash:** Notifica a los usuarios sobre el inicio de la formación de equipos [cite: 216-220][cite_start], los días del torneo [cite: 220-223] [cite_start]y envía un recordatorio de "última llamada" 10 minutos antes del cierre de inscripciones [cite: 223-227].
-* [cite_start]**Anuncios de Parche:** Avisa un día antes de un parche con una cuenta regresiva [cite: 207-212] [cite_start]y anuncia las notas cuando están disponibles [cite: 212-215].
-* [cite_start]**Respuestas Visuales:** Utiliza "Embeds" de Discord [cite: 232-234, 237-239] para presentar la información de manera limpia, profesional y visualmente atractiva, incluyendo imágenes de campeones, íconos de habilidades y resúmenes.
-* [cite_start]**Gestión de Estado:** Utiliza archivos JSON (`sent_reminders.json`) y `.txt` (`last_patch_url.txt`) [cite: 203, 214-215] como una memoria simple para evitar anuncios duplicados.
-* [cite_start]**Manejo Seguro de Secretos:** Todas las claves (token del bot, ID del canal) se gestionan de forma segura a través de variables de entorno (`.env`) [cite: 173-174].
+**Scraping Web Avanzado:** Extrae información detallada (texto, imágenes de resumen, íconos de habilidades) directamente de la página de notas de parche.
+**Sistema de Comandos Intuitivo:** Utiliza prefijos temáticos (`p!` para Parches, `c!` para Clash) para una navegación fácil e intuitiva.
+**Anuncios Proactivos:** El bot es "consciente del tiempo" gracias a la librería `pytz`. Revisa un calendario (`.json`) y envía anuncios automáticamente en la zona horaria de CDMX.
+**Anuncios de Clash:** Notifica a los usuarios sobre el inicio de la formación de equipos, los días del torneo y envía un recordatorio de "última llamada" 10 minutos antes del cierre de inscripciones.
+**Anuncios de Parche:** Avisa un día antes de un parche con una cuenta regresiva y anuncia las notas cuando están disponibles.
+**Respuestas Visuales:** Utiliza "Embeds" de Discord para presentar la información de manera limpia, profesional y visualmente atractiva, incluyendo imágenes de campeones, íconos de habilidades y resúmenes.
+**Gestión de Estado:** Utiliza archivos JSON (`sent_reminders.json`) y `.txt` (`last_patch_url.txt`) como una memoria simple para evitar anuncios duplicados.
+**Manejo Seguro de Secretos:** Todas las claves (token del bot, ID del canal) se gestionan de forma segura a través de variables de entorno (`.env`).
 
 ---
 
@@ -35,8 +35,6 @@ Este proyecto fue construido con Python y demuestra un pipeline de datos complet
 ---
 
 ## ⚙️ Comandos Disponibles
-
-[cite_start](Esta es la versión final y limpia de tu comando de ayuda [cite: 253-257])
 
 ### --- 📜 Comandos de Parche ---
 * `p!parche` - Información del último **parche**.
