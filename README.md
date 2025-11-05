@@ -12,14 +12,14 @@ Este proyecto fue construido con Python y demuestra un pipeline de datos complet
 
 ## 🚀 Características Principales
 
-**Scraping Web Avanzado:** Extrae información detallada (texto, imágenes de resumen, íconos de habilidades) directamente de la página de notas de parche.
-**Sistema de Comandos Intuitivo:** Utiliza prefijos temáticos (`p!` para Parches, `c!` para Clash) para una navegación fácil e intuitiva.
-**Anuncios Proactivos:** El bot es "consciente del tiempo" gracias a la librería `pytz`. Revisa un calendario (`.json`) y envía anuncios automáticamente en la zona horaria de CDMX.
-**Anuncios de Clash:** Notifica a los usuarios sobre el inicio de la formación de equipos, los días del torneo y envía un recordatorio de "última llamada" 10 minutos antes del cierre de inscripciones.
-**Anuncios de Parche:** Avisa un día antes de un parche con una cuenta regresiva y anuncia las notas cuando están disponibles.
-**Respuestas Visuales:** Utiliza "Embeds" de Discord para presentar la información de manera limpia, profesional y visualmente atractiva, incluyendo imágenes de campeones, íconos de habilidades y resúmenes.
-**Gestión de Estado:** Utiliza archivos JSON (`sent_reminders.json`) y `.txt` (`last_patch_url.txt`) como una memoria simple para evitar anuncios duplicados.
-**Manejo Seguro de Secretos:** Todas las claves (token del bot, ID del canal) se gestionan de forma segura a través de variables de entorno (`.env`).
+* **Scraping Web Avanzado:** Extrae información detallada (texto, imágenes de resumen, íconos de habilidades) directamente de la página de notas de parche.
+* **Sistema de Comandos Intuitivo:** Utiliza prefijos temáticos (`p!` para Parches, `c!` para Clash) para una navegación fácil e intuitiva.
+* **Anuncios Proactivos:** El bot es "consciente del tiempo" gracias a la librería `pytz`. Revisa un calendario (`.json`) y envía anuncios automáticamente en la zona horaria de CDMX.
+* **Anuncios de Clash:** Notifica a los usuarios sobre el inicio de la formación de equipos, los días del torneo y envía un recordatorio de "última llamada" 10 minutos antes del cierre de inscripciones.
+* **Anuncios de Parche:** Avisa un día antes de un parche con una cuenta regresiva y anuncia las notas cuando están disponibles.
+* **Respuestas Visuales:** Utiliza "Embeds" de Discord para presentar la información de manera limpia, profesional y visualmente atractiva, incluyendo imágenes de campeones, íconos de habilidades y resúmenes.
+* **Gestión de Estado:** Utiliza archivos JSON (`sent_reminders.json`) y `.txt` (`last_patch_url.txt`) como una memoria simple para evitar anuncios duplicados.
+* **Manejo Seguro de Secretos:** Todas las claves (token del bot, ID del canal) se gestionan de forma segura a través de variables de entorno (`.env`).
 
 ---
 
