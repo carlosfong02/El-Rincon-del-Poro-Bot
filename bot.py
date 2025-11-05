@@ -1,4 +1,4 @@
-#bot.py (BETA v1.1.0 - Enhanced Version)
+#bot.py (BETA v1.2.0 - Enhanced Version)
 
 import discord
 import os

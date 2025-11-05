@@ -1,28 +1,44 @@
 Changelog.
 Proyecto: El Rincón del Poro.
 
-v1.1.0 (BETA) (04 de noviembre de 2025)
+
+v1.2.0 (Despliegue 24/7) (04 de noviembre de 2025)
+Esta versión no introduce nuevos comandos de usuario, sino que se enfoca al 100% en la infraestructura y el despliegue del bot, asegurando su funcionamiento autónomo 24/7.
+
+[NUEVO] Migración a Replit: El bot ha sido desplegado exitosamente en la plataforma en la nube Replit.
+
+[NUEVO] Implementación de 24/7: Se añadió un mecanismo de "keep-alive" para asegurar que el bot funcione de manera continua y no sea "dormido" por el host.
+
+[NUEVO] Servidor Web de Soporte: Se creó el archivo keep_alive.py utilizando la biblioteca Flask. Este script levanta un servidor web en un hilo (thread) separado para recibir "pings" externos.
+
+[NUEVO] Monitoreo Externo: Se configuró un monitor en UptimeRobot para visitar el servidor web cada 5 minutos, garantizando la actividad 24/7 del bot.
+
+[MEJORA] Limpieza de requisitos: Se utilizó la herramienta pipreqs para auditar el código fuente y regenerar un requirements.txt limpio y preciso.
+
+[MEJORA] Reducción de dependencias: El archivo de requisitos se redujo drásticamente de 27 a 6 paquetes, optimizando el entorno de despliegue.
+
+[MEJORA] Se actualizó el README.md con la nueva sección "Despliegue 24/7 en Replit" que explica la arquitectura de despliegue y el flujo de trabajo.
+
+
+v1.1.0 (BETA) (03 de noviembre de 2025)
 Esta versión representa una reestructuración mayor del bot para mejorar la intuición de los comandos y corregir bugs de scraping.
 
-🏛️ Arquitectura y Reestructuración de Comandos
 [REFACTOR] Se eliminó el sistema de comandos estándar (@bot.command) y se reemplazó por un manejador de eventos manual (@bot.event on_message).
 
 [NUEVO] Se implementaron prefijos temáticos para organizar los comandos:
 
 p! para todos los comandos relacionados con Parches.
-
 c! para todos los comandos relacionados con Clash.
 
 [MEJORA] Se renombraron todos los comandos para seguir la nueva estructura (ej. !parche ahora es p!parche, !sclash es c!clash, !cparche es p!calendario, etc.).
 
 [MEJORA] El comando !ayuda ahora es global y se actualizó por completo para reflejar la nueva estructura p!/c! y las descripciones que solicitaste.
 
-Corrección de Bugs y Mejoras de Scraping
 [CORRECCIÓN] Se solucionó un bug crítico por el cual p!objetos y p!runas no mostraban información aunque existieran cambios.
 
 [MEJORA] Se actualizó la función scrape_section_details para que devuelva una lista estructurada de cambios (con título, ícono, resumen y detalles), en lugar de un solo bloque de texto.
 
-[MEJJORA] Se rediseñó la respuesta de p!objetos y p!runas. Ahora muestran un "Embed" individual y formateado para cada ítem o runa, imitando el estilo visual de p!ver para una legibilidad mucho mayor.
+[MEJORA] Se rediseñó la respuesta de p!objetos y p!runas. Ahora muestran un "Embed" individual y formateado para cada ítem o runa, imitando el estilo visual de p!ver para una legibilidad mucho mayor.
 
 
 v1.0.0 (15 de octubre de 2025) - Lanzamiento Estable y Pulido Final
