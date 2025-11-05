@@ -10,6 +10,7 @@ from bs4 import BeautifulSoup, NavigableString
 from dotenv import load_dotenv
 from discord.ext import tasks, commands
 from datetime import datetime, timedelta
+from keep_alive import keep_alive
 
 # --- Configuración y Carga ---
 load_dotenv()
@@ -771,4 +772,5 @@ async def handle_ayuda(message):
 
 # --- Punto de Entrada ---
 load_config()
+keep_alive()
 bot.run(TOKEN)

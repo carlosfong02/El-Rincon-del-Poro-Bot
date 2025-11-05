@@ -69,8 +69,25 @@ Este proyecto fue construido con Python y demuestra un pipeline de datos complet
     DISCORD_TOKEN="TU_TOKEN_DE_BOT"
     DISCORD_CHANNEL_ID="EL_ID_DEL_CANAL_DE_ANUNCIOS"
     ```
-4.  Crea los archivos de configuración (`champions.txt`, `patch_dates.json`, `clash_dates.json`, `clash_info.json`).
-5.  Ejecuta el bot:
+4.  Ejecuta el bot:
     ```bash
     python bot.py
     ```
+
+## 🚀 Despliegue 24/7 en Replit
+
+Este bot está configurado para funcionar 24/7 de forma gratuita utilizando la plataforma [Replit](https://replit.com/) y un servicio de monitoreo externo.
+
+### Cómo Funciona
+
+El despliegue se basa en un truco simple para evitar que los "Repls" gratuitos se "duerman" por inactividad:
+
+1.  **Servidor Web Ligero:** Se utiliza la biblioteca **Flask** (ver `keep_alive.py`) para crear un pequeño servidor web que se ejecuta en un hilo paralelo junto al bot de Discord.
+2.  **Monitoreo Externo:** Un servicio gratuito como [UptimeRobot](https://uptimerobot.com/) se configura para "visitar" la URL pública de este servidor web (la dirección `.repl.app`) cada 5 minutos.
+3.  **Actividad Constante:** Esta visita constante simula tráfico y le indica a Replit que el proyecto está activo, evitando que el bot se desconecte.
+
+### Nuevas Dependencias para Despliegue
+
+* **Flask:** Para crear el servidor web.
+* **UptimeRobot:** (Servicio externo) Para el monitoreo.
+* **keep_alive.py:** El script que contiene la lógica del servidor web.
