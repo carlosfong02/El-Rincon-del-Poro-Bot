@@ -1,0 +1,21 @@
+{
+  "horarios": {
+    "titulo": "🕔 Horarios de Fase de Confirmación (CDMX, GMT-6)",
+    "niveles": [
+      { "nombre": "Nivel IV", "horario": "17:00 - 19:00 (2 horas)" },
+      { "nombre": "Nivel III", "horario": "17:30 - 19:00 (1.5 horas)" },
+      { "nombre": "Nivel II", "horario": "18:00 - 19:00 (1 hora)" },
+      { "nombre": "Nivel I", "horario": "18:30 - 19:00 (30 minutos)" }
+    ]
+  },
+  "premios": {
+    "titulo": "🎁 Premios de Clash",
+    "descripcion": "Las recompensas se basan en la cantidad de victorias en el torneo.",
+    "lista": [
+      { "lugar": "🥇 1er Lugar (3 Victorias)", "recompensa": "1 gesto, 1 ícono, 1 logo, 1 ícono chibi, fragmentos de aspecto (640, 975, 1350 RP), 1 boleto básico." },
+      { "lugar": "🥈 2do Lugar (2 Victorias, 1 Derrota)", "recompensa": "1 gesto, 1 ícono, 1 logo, fragmentos de aspecto (640, 975 RP), 1 boleto básico." },
+      { "lugar": "🥉 3er Lugar (1 Victoria, 2 Derrotas)", "recompensa": "1 gesto, 1 logo, fragmento de aspecto de centinela (640 RP)." },
+      { "lugar": "Participación (0 Victorias, 3 Derrotas)", "recompensa": "Aumento de XP de 3 victorias, 1 logo, 1 ícono misterioso." }
+    ]
+  }
+}

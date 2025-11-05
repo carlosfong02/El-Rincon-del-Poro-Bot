@@ -1,0 +1,104 @@
+Changelog.
+Proyecto: El Rincón del Poro.
+
+v1.1.0 (BETA) (04 de noviembre de 2025)
+Esta versión representa una reestructuración mayor del bot para mejorar la intuición de los comandos y corregir bugs de scraping.
+
+🏛️ Arquitectura y Reestructuración de Comandos
+[REFACTOR] Se eliminó el sistema de comandos estándar (@bot.command) y se reemplazó por un manejador de eventos manual (@bot.event on_message).
+
+[NUEVO] Se implementaron prefijos temáticos para organizar los comandos:
+
+p! para todos los comandos relacionados con Parches.
+
+c! para todos los comandos relacionados con Clash.
+
+[MEJORA] Se renombraron todos los comandos para seguir la nueva estructura (ej. !parche ahora es p!parche, !sclash es c!clash, !cparche es p!calendario, etc.).
+
+[MEJORA] El comando !ayuda ahora es global y se actualizó por completo para reflejar la nueva estructura p!/c! y las descripciones que solicitaste.
+
+Corrección de Bugs y Mejoras de Scraping
+[CORRECCIÓN] Se solucionó un bug crítico por el cual p!objetos y p!runas no mostraban información aunque existieran cambios.
+
+[MEJORA] Se actualizó la función scrape_section_details para que devuelva una lista estructurada de cambios (con título, ícono, resumen y detalles), en lugar de un solo bloque de texto.
+
+[MEJJORA] Se rediseñó la respuesta de p!objetos y p!runas. Ahora muestran un "Embed" individual y formateado para cada ítem o runa, imitando el estilo visual de p!ver para una legibilidad mucho mayor.
+
+
+v1.0.0 (15 de octubre de 2025) - Lanzamiento Estable y Pulido Final
+Esta versión marca la finalización de todas las características planeadas, con un enfoque en la robustez y la experiencia de usuario.
+
+[CORRECCIÓN] Se solucionó un bug crítico en el comando !ver que impedía mostrar cambios a estadísticas básicas o secciones sin ícono de habilidad. El scraper ahora captura todos los bloques de cambios de un campeón.
+
+[MEJORA] Se refactorizó el código de los comandos !iclash y !pclash, moviendo la información estática a un archivo de configuración clash_info.json para un código más limpio y fácil de mantener.
+
+[MEJORA] Se estandarizaron todos los mensajes de error del bot (ej. "campeón no encontrado") para que usen "Embeds", manteniendo una consistencia visual.
+
+[MEJORA] El comando !ayuda fue rediseñado con descripciones más concisas y palabras clave en negritas para mejorar la legibilidad.
+
+v0.7.0 (14 de octubre de 2025) - Módulo Avanzado de Clash
+Se introduce un sistema completo para el seguimiento de torneos de Clash.
+
+[NUEVO] Se implementó un sistema de recordatorios automáticos y proactivos para los torneos de Clash, con 3 tipos de avisos: inicio de formación de equipos, recordatorio matutino del torneo y aviso de "última llamada".
+
+[NUEVO] Se añadieron los comandos !clash, !cclash, !hclash y !pclash para consultar información detallada sobre los torneos.
+
+[NUEVO] Se creó un archivo de configuración clash_dates.json para gestionar el calendario de Clash.
+
+
+v0.6.0 (13 de octubre de 2025) - Módulo de Calendario y Anuncios Proactivos
+El bot adquiere la capacidad de "conocer el futuro" basándose en calendarios.
+
+[NUEVO] Se implementó una tarea automática inteligente que avisa un día antes de un parche, incluyendo una cuenta regresiva.
+
+[NUEVO] Se crearon los comandos !sparche y !cparche para consultar el calendario de parches futuros.
+
+[NUEVO] Se creó el archivo de configuración patch_dates.json para gestionar las fechas de los parches.
+
+
+v0.5.0 (12 de octubre de 2025) - Expansión de Comandos de Scraping
+Se amplía la capacidad del bot para extraer más información de las notas del parche.
+
+[NUEVO] Se implementaron los comandos !objetos y !runas utilizando una función de scraping genérica.
+
+[MEJORA] Se refactorizó el scraper para poder extraer secciones completas de la página por su id, no solo campeones.
+
+
+v0.4.0 (11 de octubre de 2025) - Scraping Detallado y Comandos Dinámicos
+La funcionalidad principal del bot se vuelve mucho más potente y específica.
+
+[NUEVO] Se implementó el comando dinámico !ver <campeón> para obtener los cambios detallados de un campeón específico.
+
+[NUEVO] Se desarrolló una función de scraping avanzada capaz de parsear la estructura interna de la sección de un campeón.
+
+[NUEVO] Se añadió una lista de campeones (champions.txt) para la validación de comandos.
+
+
+v0.3.0 (10 de octubre de 2025) - Mejora Visual con "Embeds"
+Se realiza una revisión completa de la presentación visual de las respuestas del bot.
+
+[MEJORA] Todas las respuestas de texto plano del bot fueron reemplazadas por "Embeds" de Discord para una apariencia más profesional y legible.
+
+[NUEVO] Se implementó el comando !campeones para listar todos los campeones afectados en un parche.
+
+[NUEVO] Se creó la primera versión del comando !ayuda.
+
+
+v0.2.0 (9 de octubre de 2025) - Anuncios Automáticos (MVP)
+Se establece la funcionalidad principal y autónoma del bot.
+
+[NUEVO] Se implementó la primera versión del web scraper con Requests y BeautifulSoup para encontrar el enlace y título del último parche.
+
+[NUEVO] Se creó la tarea automática (@tasks.loop) que revisa periódicamente la página de LoL en busca de actualizaciones.
+
+[NUEVO] Se implementó un sistema de "memoria" (last_patch_url.txt) para evitar anunciar el mismo parche repetidamente.
+
+
+v0.1.0 (8 de octubre de 2025) - La Fundación
+La primera versión funcional del bot.
+
+[NUEVO] Creación de la estructura básica del proyecto.
+
+[NUEVO] El bot se conecta exitosamente a Discord usando un token seguro desde un archivo .env.
+
+[NUEVO] Implementación de un comando de prueba (!hola) para verificar la conexión y respuesta.

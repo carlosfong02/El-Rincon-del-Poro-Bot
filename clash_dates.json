@@ -1,0 +1,22 @@
+{
+  "clash_events": [
+    {
+      "name": "Worlds",
+      "version": "25.21",
+      "team_formation_start": "2025-10-13",
+      "tournament_days": ["2025-10-18", "2025-10-19"]
+    },
+    {
+      "name": "Copa de ARAM",
+      "version": "25.23",
+      "team_formation_start": "2025-11-17",
+      "tournament_days": ["2025-11-22", "2025-11-23"]
+    },
+    {
+      "name": "Copa de ARAM",
+      "version": "25.24",
+      "team_formation_start": "2025-12-08",
+      "tournament_days": ["2025-12-13", "2025-12-14"]
+    }
+  ]
+}
