@@ -2,10 +2,10 @@
   "horarios": {
     "titulo": "🕔 Horarios de Fase de Confirmación (CDMX, GMT-6)",
     "niveles": [
-      { "nombre": "Nivel IV", "horario": "17:00 - 19:00 (2 horas)" },
-      { "nombre": "Nivel III", "horario": "17:30 - 19:00 (1.5 horas)" },
-      { "nombre": "Nivel II", "horario": "18:00 - 19:00 (1 hora)" },
-      { "nombre": "Nivel I", "horario": "18:30 - 19:00 (30 minutos)" }
+      { "nombre": "Nivel IV", "horario": "18:00 - 20:00 (2 horas)" },
+      { "nombre": "Nivel III", "horario": "18:30 - 20:00 (1.5 horas)" },
+      { "nombre": "Nivel II", "horario": "19:00 - 20:00 (1 hora)" },
+      { "nombre": "Nivel I", "horario": "19:30 - 20:00 (30 minutos)" }
     ]
   },
   "premios": {
